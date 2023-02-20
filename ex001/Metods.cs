@@ -8,7 +8,7 @@ public static int []CreateArray (int size)
   return new int[size];
 }
 
-// 2. Заполнение массива
+// 2. Заполнение массива рандомно
 
 public static void FillArray (int []NameArray)
 {
@@ -126,22 +126,29 @@ public static void Enumepatian (int[] array)
     index++;
   }
 }
-public static string Enumepatian1 (int[] array)
+
+// Проверка является ли число пятизначным
+
+public static int ProvNaFifth ()
 {
-  string text = String.Empty;
-  int index = 0;
-  while (index < array.Length)
-  { 
-    if (ProvNaPovtor(array, index) == 0)
-    {
-    text = "-" + FindNumber(array, array[index])+",";
-    }
-    index++;
+  int number = Input("Введите 5-тизначное число: ");
+  while (number < 9999 || number > 100000)
+  {
+    Console.WriteLine("Число не пятизначное!");
+    number = Input("Введите 5-тизначное число");
   }
-  return text;
-}
+  return number;
 }
 
- 
+//Проверка на палиндром пятизначного числа
+public static void Palindrom5th (int number1)
+{
+  int number2 = (number1 / 10000 - number1 % 10) + (number1 % 10000 / 1000 - number1 % 100 / 10);
+  if (number2 == 0) 
+  Console.WriteLine("Палиндром");
+  else 
+  Console.WriteLine("Не палиндром");
+}
+}
 
  
