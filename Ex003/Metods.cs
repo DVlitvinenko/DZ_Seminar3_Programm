@@ -1,16 +1,19 @@
 
 public class Metods
 {
-  // 1. Создание массива
+  
+//1. Ввод данных
 
-public static int []CreateArray (int size)
+public static int Input (string text)
 {
-  return new int[size];
+  Console.Write(text + " ");
+  return Convert.ToInt32(Console.ReadLine());;
 }
 
 
 
-//2.получаем таблицу кубов до max
+
+//2/ получаем таблицу кубов до max
 public static void ThreeCubed (int max)
 {
   Console.Write(max + " -> 1");
